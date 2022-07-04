@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import electron from '/electron.png'
-import react from '/react.svg'
-import vite from '/vite.svg'
-import styles from 'styles/app.module.scss'
+import { useState } from "react";
+import electron from "/electron.png";
+import react from "/react.svg";
+import vite from "/vite.svg";
+import styles from "styles/app.module.scss";
 
 const App: React.FC = () => {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0);
   return (
     <div className={styles.app}>
       <header className={styles.appHeader}>
@@ -14,18 +13,18 @@ const App: React.FC = () => {
           <div className={styles.imgBox}>
             <img
               src={electron}
-              style={{ height: '24vw' }}
+              style={{ height: "24vw" }}
               className={styles.appLogo}
               alt="electron"
             />
           </div>
           <div className={styles.imgBox}>
-            <img src={vite} style={{ height: '19vw' }} alt="vite" />
+            <img src={vite} style={{ height: "19vw" }} alt="vite" />
           </div>
           <div className={styles.imgBox}>
             <img
               src={react}
-              style={{ maxWidth: '100%' }}
+              style={{ maxWidth: "100%" }}
               className={styles.appLogo}
               alt="logo"
             />
@@ -49,7 +48,7 @@ const App: React.FC = () => {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
             className={styles.appLink}
             href="https://vitejs.dev/guide/features.html"
@@ -59,14 +58,13 @@ const App: React.FC = () => {
             Vite Docs
           </a>
           <div className={styles.staticPublic}>
-            Place static files into the{' '}
-            <code>/public</code> folder
+            Place static files into the <code>/public</code> folder
             <img style={{ width: 77 }} src="./node.png" />
           </div>
         </div>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
