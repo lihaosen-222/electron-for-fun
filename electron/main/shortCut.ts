@@ -1,7 +1,6 @@
 import { globalShortcut } from "electron";
 
-const switchWin = function (win) {
-  let isHide = false;
+const switchWin = function (win, isHide = true) {
   return function () {
     if (isHide) {
       win.show();
@@ -13,6 +12,6 @@ const switchWin = function (win) {
 };
 
 export default function shortCutInit(win){
+  win.hide();
   globalShortcut.register("CommandOrControl+Q", switchWin(win));
-  
 }

@@ -3,6 +3,7 @@ import { release } from 'os'
 import { join } from 'path'
 import shortCutInit from './shortCut'
 import consoleInit from './console'
+import serviceInit from './service/index'
 
 // Disable GPU Acceleration for Windows 7
 if (release().startsWith('6.1')) app.disableHardwareAcceleration()
@@ -61,6 +62,7 @@ async function createWindow() {
 
   shortCutInit(win)
   consoleInit(win)
+  serviceInit()
   win.webContents.openDevTools();
 }
 
