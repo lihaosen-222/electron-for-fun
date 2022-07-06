@@ -20,10 +20,8 @@ const App = () => {
       message.error("今天已经签到过了")
       return;
     } else {
-      const res = await Promise.all([
-        ipcRenderer.invoke("signIn"),
-        ipcRenderer.invoke("drawLottery"),
-      ]);
+      await ipcRenderer.invoke("signIn")
+      await ipcRenderer.invoke("drawLottery") // 签到后才有签到资格
       message.success("success")
     }
   }
